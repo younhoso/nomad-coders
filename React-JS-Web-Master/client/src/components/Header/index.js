@@ -4,7 +4,7 @@ import './style.scss';
 const HeaderComponent = () => {
     return(
         <Fragment>
-            <div className="test">ABCD</div>
+            <div className="test">ABCDGGG</div>
         </Fragment>
     )
 };
