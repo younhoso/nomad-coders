@@ -11,7 +11,7 @@ module.exports = {
     },
 
     entry: { //입력
-        app:['./App'],
+        app:['./index'],
     },
     module: {
         rules: [
