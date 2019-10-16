@@ -7,16 +7,23 @@ class AppClass extends Component {
     }
 
     add = () => {
-       const {count} = this.state;
-       this.setState({count: count + 1});
+       this.setState((current) => ({count: current.count + 1}));
     }
 
     minus = () => {
-        const {count} = this.state;
-        this.setState({count: count - 1});
+        this.setState((current) => ({count: current.count - 1}));
+    }
+
+    componentDidMount() {
+        console.log("3");
+    }
+
+    componentDidUpdate() {
+        console.log("2");
     }
 
     render(){
+        console.log("1");
         const {count} = this.state;
 
         return(

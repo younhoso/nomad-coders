@@ -5,12 +5,12 @@ const AppHoots = () => {
    const [count, setCount] = useState(0);
 
    const add = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     setCount(count + 1);
    };
 
    const minus = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     setCount(count - 1);
    };
 
