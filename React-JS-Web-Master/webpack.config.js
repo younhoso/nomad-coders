@@ -35,6 +35,7 @@ module.exports = {
                     ],
                     plugins: [
                         '@babel/plugin-proposal-class-properties',  // class문법 사용할때는 설치하고, 추가
+                        '@babel/plugin-transform-runtime',
                         'react-hot-loader/babel'                    // react-hot-loader 실행할때 babel도 실행 (추가)
                     ],
                 },
