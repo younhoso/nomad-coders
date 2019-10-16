@@ -7,7 +7,7 @@ class AppClass extends Component {
     }
 
     add = () => {
-       this.setState((current) => ({count: current.count + 1}));
+       this.setState((current) => ({count: current.count + 1})); 
     }
 
     minus = () => {
