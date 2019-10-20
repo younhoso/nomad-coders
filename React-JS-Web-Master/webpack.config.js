@@ -1,11 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //css파일로 컴파일해 별도의 파일로 불리해서 따라 생성시키기 위한 플러그인
+const HtmlWebPackPlugin = require("html-webpack-plugin");  //html파일 컴파일 할때 필수
 // process.env.NODE_ENV = 'production'; //실서버스로 반영할때 주석 풀기
 
 module.exports = {
     name: 'wordrelay-setting',
     mode: 'development', //실서버스로 반영할때: production으로 변경
     devtool: 'eval',     //hidden-source-map
+    devServer: {   // 개발 서버(테스트 서버)를 돌리는 설정
+        contentBase: path.join(__dirname, 'dist'),  //개발 서버(테스트 서버)를 돌리 폴더 지정
+        compress: true,
+        port: 9000      //포트를 9000번 포트로 지정
+    },
     resolve: { //entry에 확장자들 지정을 배열로 여러게 한다.
         extensions: ['.js', '.jsx']
     },
@@ -54,12 +61,21 @@ module.exports = {
             },
             {  // scss
                 test: /\.(css|scss)$/,
-                use: ['style-loader','css-loader','sass-loader']
+                use: [MiniCssExtractPlugin.loader,'css-loader','sass-loader']
             }
         ]
     },
     plugins: [  //추가 기능
         new webpack.LoaderOptionsPlugin({ debug: true }),
+        new HtmlWebPackPlugin({
+            template: "./index.html",   // 빌드할 대상을 말한다.
+            filename: "./index.html"    // 빌드을 했을때 나오는 결과물
+          }),
+        new MiniCssExtractPlugin({
+            filename: 'styles.css',    // 빌드되서 나오는 결과물
+            disable: false,    // CSS 청크와 관련된 고려 사항을 해결할 때까지 CSS 청크를 비활성화 할 수있는 플러그인 옵션
+            allChunks: true    // 모든 CSS 또는 SCSS를 파일로 결합하는 방법 설정
+        })
     ],
     output: {  //출력
         filename: 'app.js',

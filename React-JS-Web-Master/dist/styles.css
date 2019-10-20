@@ -1,0 +1,162 @@
+.movies .movie {
+  width: 43%;
+  float: left;
+  background: white;
+  margin: 0 38px 70px 38px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .movies .movie img {
+    max-width: 120px;
+    margin-right: 40px;
+    position: relative;
+    top: -50px;
+    box-shadow: 0 21px 50px rgba(0, 0, 0, 0.6); }
+  .movies .movie .movie__data {
+    width: 72%;
+    display: inline-block; }
+    .movies .movie .movie__data .movie__title {
+      font-size: 2.2rem; }
+    .movies .movie .movie__data .movie__year {
+      color: #c1c1c1; }
+    .movies .movie .movie__data .genres li:first-child {
+      margin: 0; }
+    .movies .movie .movie__data .genres li {
+      display: inline-block;
+      margin: 7px 10px;
+      color: #c1c1c1; }
+    .movies .movie .movie__data .genres li:last-child {
+      margin: 0; }
+    .movies .movie .movie__data .movie__summary {
+      color: #c1c1c1; }
+
+.movies .movie:nth-child(odd) {
+  clear: both; }
+
+.test {
+  display: inline-block;
+  padding: 0;
+  color: blue;
+  font-size: 30px; }
+
+@charset "UTF-8";
+/* ======== CSS RESET ======== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-collapse: collapse; }
+
+body {
+  min-width: 320px;
+  line-height: 1;
+  word-wrap: break-word;
+  word-break: break-all; }
+
+main, article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul li {
+  list-style: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; }
+
+img {
+  vertical-align: top; }
+
+select, button {
+  outline: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+input::-webkit-input-placeholder {
+  color: #808080;
+  font-size: 12px;
+  line-height: 100%; }
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+/*========= GRID SYSTEM =========*/
+.l__wrapper {
+  width: 1575px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative; }
+
+.l_row {
+  margin: 0 -10px;
+  overflow: hidden; }
+
+/*========= Clearfix =========*/
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/*========= 이미지 썸네일 =========*/
+.thumb {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  height: 100%; }
+
+html, body, #root, .container {
+  height: 100%; }
+
+.container {
+  margin-top: 90px; }
+
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
